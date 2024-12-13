@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="807.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iff.livraria.controller.view.TesteexibirlivrosController">
+    <stylesheets>
+        <URL value="@../styles/testeexibirlivros.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tabelaDeLivros" layoutX="14.0" layoutY="104.0" onMouseClicked="#onClickFunction" prefHeight="458.0" prefWidth="807.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="nomeDoLivro" prefWidth="359.09221839904785" text="Nome do livro" />
+          <TableColumn fx:id="autor" minWidth="0.0" prefWidth="376.3650207519531" text="Autor" />
+            <TableColumn fx:id="lido" prefWidth="71.8184814453125" text="Lido" />
+        </columns>
+      </TableView>
+      <ToolBar layoutX="107.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <Button mnemonicParsing="false" text="Voltar" />
+            <Label text="Livros">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

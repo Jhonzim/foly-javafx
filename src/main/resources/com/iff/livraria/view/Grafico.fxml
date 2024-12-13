@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iff.livraria.controller.GraficoController">
+   <top>
+      <PieChart fx:id="graficopizza" prefHeight="355.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <Button fx:id="btnVoltar" mnemonicParsing="false" onAction="#OnActionbtnVoltar" style="-fx-background-color: transparent; -fx-border-color: white;" text="Voltar" textFill="#fffcfc" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

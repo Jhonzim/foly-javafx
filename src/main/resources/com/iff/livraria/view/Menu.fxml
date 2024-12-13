@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: DarkGray;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iff.livraria.controller.MenuController">
+   <left>
+      <AnchorPane prefHeight="401.0" prefWidth="146.0" style="-fx-background-color: #696969;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_home" layoutX="48.0" layoutY="64.0" mnemonicParsing="false" onAction="#swithForm" style="-fx-background-color: tarsnparent; -fx-border-color: white;" text="Home" textFill="WHITE" />
+            <Button fx:id="btn_exibir" layoutX="50.0" layoutY="186.0" mnemonicParsing="false" onAction="#swithForm" style="-fx-background-color: tarsnparent; -fx-border-color: white;" text="Exibir" textFill="WHITE" />
+            <Button fx:id="btn_livros" layoutX="22.0" layoutY="123.0" mnemonicParsing="false" onAction="#swithForm" style="-fx-background-color: tarsnparent; -fx-border-color: white;" text="Cadastrar Livros" textFill="WHITE" />
+            <Button fx:id="btnVoltar" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#OnactionbtnVoltar" style="-fx-background-color: tarsnparent; -fx-border-color: white;" text="Voltar" textFill="WHITE" />
+            <Button fx:id="btnGrafico" layoutX="45.0" layoutY="257.0" mnemonicParsing="false" onAction="#OnActionbtnGrafico" style="-fx-background-color: tarsnparent; -fx-border-color: white;" text="Gráfico" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane minWidth="-Infinity" prefHeight="398.0" prefWidth="449.0" style="-fx-background-color: DarkGray;" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <AnchorPane fx:id="home" layoutX="-6.0" prefHeight="400.0" prefWidth="462.0" style="-fx-background-color: DarkGray;" visible="false">
+               <children>
+                  <Label layoutX="201.0" layoutY="39.0" text="Home">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnExcluirHome" layoutX="36.0" layoutY="350.0" mnemonicParsing="false" onAction="#OnActionbtnExcluirHome" text="Excluir" />
+                  <Label layoutX="54.0" layoutY="108.0" text="Usuario:" />
+                  <Label fx:id="txtNome_Home" layoutX="123.0" layoutY="108.0" prefHeight="14.0" prefWidth="127.0" text="Nome-Usuario" />
+                  <Label layoutX="54.0" layoutY="126.0" text="Email:" />
+                  <Label fx:id="txtEmail_Home" layoutX="123.0" layoutY="126.0" prefHeight="14.0" prefWidth="127.0" text="Email-Usuario" />
+                  <Button fx:id="btnEditarHome" layoutX="353.0" layoutY="350.0" mnemonicParsing="false" onAction="#OnActionbtnEditarHome" text="Editar Usuario" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="livros" layoutX="-2.0" layoutY="-6.0" prefHeight="409.0" prefWidth="458.0" style="-fx-background-color: DarkGray;" visible="false">
+               <children>
+                  <Button fx:id="btnCriar" layoutX="204.0" layoutY="350.0" mnemonicParsing="false" onAction="#OnActionbtnCriar" text="Criar" />
+                  <TextField fx:id="txtNome" layoutX="296.0" layoutY="100.0" />
+                  <TextField fx:id="txtAutor" layoutX="296.0" layoutY="142.0" />
+                  <Label layoutX="153.0" layoutY="35.0" prefHeight="36.0" prefWidth="144.0" text="Um novo Livro ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="251.0" layoutY="104.0" text="Nome:" />
+                  <Label layoutX="237.0" layoutY="197.0" text="Descrição" />
+                  <Label layoutX="253.0" layoutY="146.0" text="Autor" />
+                  <TextField fx:id="txtDescricao" layoutX="295.0" layoutY="193.0" prefHeight="49.0" prefWidth="150.0" />
+                  <HBox fx:id="Hbox" alignment="CENTER" layoutX="25.0" layoutY="73.0" prefHeight="218.0" prefWidth="124.0">
+                     <children>
+                        <ImageView fx:id="Imgbox" fitHeight="230.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnImg" layoutX="68.0" layoutY="312.0" mnemonicParsing="false" onAction="#OnActionbtnImg" text="Imagem" />
+                  <CheckBox fx:id="txtcheckBox" layoutX="348.0" layoutY="259.0" mnemonicParsing="false" text="Lido" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="exibir" layoutX="-5.0" layoutY="-4.0" prefHeight="400.0" prefWidth="463.0" style="-fx-background-color: DarkGray;" visible="false">
+               <children>
+                  <TableView fx:id="tableView" onMouseClicked="#OnMouseClick" prefHeight="413.0" prefWidth="465.0" style="-fx-background-color: DarkGray;">
+                     <columns>
+                        <TableColumn fx:id="tableNome" prefWidth="203.2000184059143" resizable="false" text="Nome " />
+                        <TableColumn fx:id="tableAutor" prefWidth="176.0" resizable="false" text="Autor" />
+                        <TableColumn fx:id="tableLido" prefWidth="85.5999816894531" resizable="false" text="Lido" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="edicao" prefHeight="400.0" prefWidth="460.0" visible="false">
+               <children>
+                  <Button fx:id="btnEdicao" layoutX="164.0" layoutY="312.0" mnemonicParsing="false" onAction="#OnActionSalvarEdicao" text="Salvar Alteração" />
+                  <TextField fx:id="txtNomeEdicao" layoutX="258.0" layoutY="92.0" />
+                  <TextField fx:id="txtAutorEdicao" layoutX="258.0" layoutY="134.0" />
+                  <Label layoutX="193.0" layoutY="14.0" text="Edição">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="181.0" layoutY="96.0" text="Novo Nome:" />
+                  <Label layoutX="165.0" layoutY="185.0" text="Nova Descrição:" />
+                  <Label layoutX="182.0" layoutY="138.0" text="Novo Autor:" />
+                  <TextField fx:id="txtDescricaoEdicao" layoutX="257.0" layoutY="185.0" prefHeight="49.0" prefWidth="150.0" />
+                  <HBox fx:id="Hbox2" alignment="CENTER" layoutX="87.0" layoutY="48.0" prefHeight="230.0" prefWidth="148.0" />
+                  <CheckBox fx:id="txtcheckBoxEdicao" layoutX="309.0" layoutY="261.0" mnemonicParsing="false" text="Lido" />
+                  <Button fx:id="btnEditarExcluir" layoutX="176.0" layoutY="351.0" mnemonicParsing="false" onAction="#OnActionbtnEditarExcluir" text="Excluir livro" />
+                  <Button fx:id="imgEdicao" layoutX="54.0" layoutY="279.0" mnemonicParsing="false" onAction="#OnActionbtnImgEdicao" text="imagem" />
+                  <HBox fx:id="Hbox" alignment="CENTER" layoutX="11.0" layoutY="40.0" prefHeight="218.0" prefWidth="124.0">
+                     <children>
+                        <ImageView fx:id="ImgboxEdicao" fitHeight="230.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
